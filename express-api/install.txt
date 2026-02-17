@@ -1,0 +1,15 @@
+npm init -y
+npm install express --save
+npm install nodemon--save-dev
+npm i typescript tsx ts-node @types/node -D
+npx tsc --init
+npm install dotenv
+npm i @types/cors -D
+
+For Prisma + Butter-auth + Neon PostgreSQL
+
+-npm install ws @prisma/adapter-neon @neondatabase/serverless
+-npm install -D @types/ws
+-npm i -D bufferutil
+-npm install better-auth
+-npx @better-auth/cli@latest secret

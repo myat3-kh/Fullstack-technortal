@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Tech Blog</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <a href="#" class="logo">TechInsights</a>
+        <nav class="main-nav" id="main-nav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li>
+              <a href="#" id="dropdown-toggle">Categories</a>
+              <div class="dropdown-content" id="dropdown-content">
+                <a href="#">JavaScript</a><a href="#">CSS</a
+                ><a href="#">Web Design</a><a href="#">Tutorials</a>
+              </div>
+            </li>
+
+            <li><a href="#">Content</a></li>
+          </ul>
+        </nav>
+        <button class="burger-menu" id="burger-menu">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="blog-section">
+        <div class="container">
+          <h2 class="section-title">Latest Articles</h2>
+          <div class="blog-grid">
+            <atricles class="blog-card">
+              <img src="images/dl15.jfif" alt="Blog Images" />
+              <div class="blog-card-content">
+                <h3>Mastering theb New Features of HTML5</h3>
+                <div class="blog-meta">By Jane Doe Aug 09,2025</div>
+                <p>
+                  HTML5 introduced powerful new elements like article,nav and
+                  section.Lets div into how to use them to create more semantics
+                  and accseeible web pages.
+                </p>
+                <a href="#" class="read-more-btn">Read More</a>
+              </div>
+            </atricles>
+            <atricles class="blog-card"
+              ><img src="images/dl17.jfif" alt="Blog Images" />
+              <div class="blog-card-content">
+                <h3>Mastering theb New Features of HTML5</h3>
+                <div class="blog-meta">By Jane Doe Aug 09,2025</div>
+                <p>
+                  HTML5 introduced powerful new elements like article,nav and
+                  section.Lets div into how to use them to create more semantics
+                  and accseeible web pages.HTML5 introduced powerful new
+                  elements like article,nav and section.Lets div into how to use
+                  them to create more semantics and accseeible web pages.
+                </p>
+                <a href="#" class="read-more-btn">Read More</a>
+              </div></atricles
+            >
+            <atricles class="blog-card"
+              ><img src="images/dl16.jpg" alt="Blog Images" />
+              <div class="blog-card-content">
+                <h3>Mastering theb New Features of HTML5</h3>
+                <div class="blog-meta">By Jane Doe Aug 09,2025</div>
+                <p>
+                  HTML5 introduced powerful new elements like article,nav and
+                  section.Lets div into how to use them to create more semantics
+                  and accseeible web pages.
+                </p>
+                <a href="#" class="read-more-btn">Read More</a>
+              </div>
+            </atricles>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="main-footer">
+      <div>
+        <h4>Subscribe to Our Newsletter</h4>
+        <p>get the latest tech tips and tutorials delivered to our inbox.</p>
+        <form action="#" class="subscribe-form">
+          <input type="text" placeholder="Enter Email" />
+          <buttom>Submit</buttom>
+        </form>
+        <div class="copy-right">@ 2025 TechInsights. All Right Reserved.</div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const dropdownToggle = document.getElementById("dropdown-toggle");
+        const dropdownContent = document.getElementById("dropdown-content");
+
+        dropdownToggle.addEventListener("click", function (event) {
+          event.preventDefault();
+          event.stopPropagation();
+
+          dropdownContent.classList.toggle("show");
+        });
+        const burgerMenu = document.getElementById("burger-menu");
+        const mainNav = document.getElementById("main-nav");
+
+        burgerMenu.addEventListener("click", function () {
+          mainNav.classList.toggle("mobile-active");
+        });
+
+        document.addEventListener("click", function () {
+          if (
+            !dropdownToggle.contains(event.target) &&
+            !dropdownContent.contains(event.target)
+          ) {
+            dropdownContent.classList.remove("show");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
