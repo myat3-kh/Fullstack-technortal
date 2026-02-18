@@ -3,6 +3,18 @@
 import { betterAuth } from "better-auth";
 import { prismaAdapter } from "better-auth/adapters/prisma";
 import prisma from "./prisma";
+import { createAuthClient } from "better-auth/react";
+import { emailOTPClient } from "better-auth/client/plugins";
+
+export const { signIn, signUp, signOut, useSession, emailOtp } =
+  createAuthClient({
+    /** The base URL of the server (optional if you're using the same domain) */
+    baseURL: "http://localhost:8080",
+    fetchOptions: {
+      credentials: "include",
+    },
+    plugins: [emailOTPClient()],
+  });
 
 export const auth = betterAuth({
   database: prismaAdapter(prisma, {
